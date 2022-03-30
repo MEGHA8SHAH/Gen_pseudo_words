@@ -1,2 +1,4 @@
 # Gen_pseudo_words
-Generating Pseudo words
+
+
+generation of pseudo words
