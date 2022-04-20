@@ -10,8 +10,14 @@ The aim is to create pseudowords using both orthographical and phonological rule
 The generator is only working with one language - English
 
 
+How would the generator run?
 
-Phonological rules used:
+Step 1: User will have to select the database to use it as a pre-processed word list in the language - default setting - English
+
+Step 2: They, will then have to select the phonological rules they wish to abide - eg: all 3, only 1, or any 2. (The rule should be manually selected by the user)
+
+
+Phonological rules avaliable :
 
 - "Voiceless stops /p/, /t/, and /k/ are asiprated in word initially and in intially stressed syllables"
 
@@ -20,17 +26,11 @@ Phonological rules used:
 - "All vowels or dipthongs are pronounced lobger when followed by a voiced consonant"
 
 
+Step 3: A word list will be created of all the words in the database that follows rule(s) specified. 
 
+Step 4: They then have to choose the generation setting - Tri-grams or Bi-grams (each of the two setting decomposes each word in the word list into 2 different frequencies).
 
-Possible way of running the Generator:
+Step 5: Finally, user have to select the number of pseudowords it wants the generator to create.
 
-User will have to select the language they wish to work with - default setting - English
-
-They, will then have to select the phonological rules they wish to abide - default - ALL
-
-They then have to choose the creation setting; using Tri-grams or Bi-grams.
-
-Finally select the number of pseudowords it wants the generator to create.
-
-The generator will then create a set of pseudowords in the output screen.
+Step 6: The generator will then create a set of pseudowords in the output screen.
 
