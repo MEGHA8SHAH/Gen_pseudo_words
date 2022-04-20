@@ -40,5 +40,6 @@ Step 6: The generator will then create a set of pseudowords in the output screen
 Work plan
 - upload the selected database
 - add the phonological rules in form of options
-- link the rules with the database for shortlisting
-- 
+- link the rules with the database for shortlisting words
+- generate code to create bi-grams or tri-gram of the shotlisted words
+- Create a screen to project the generated pseudowords
