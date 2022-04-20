@@ -25,6 +25,7 @@ Phonological rules avaliable :
 
 - "All vowels or dipthongs are pronounced lobger when followed by a voiced consonant"
 
+>> This step helps shortlisting a set of words from the database to use it for creating pseudowords.
 
 Step 3: A word list will be created of all the words in the database that follows rule(s) specified. 
 
@@ -34,3 +35,10 @@ Step 5: Finally, user have to select the number of pseudowords it wants the gene
 
 Step 6: The generator will then create a set of pseudowords in the output screen.
 
+
+
+Work plan
+- upload the selected database
+- add the phonological rules in form of options
+- link the rules with the database for shortlisting
+- 
