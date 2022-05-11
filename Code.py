@@ -3,7 +3,7 @@ import pandas
 import random
 import string
 from collections import Counter
-from random_word import RandomWords
+
 
 # Uploading the selected data
 lexique = pandas.read_csv('lexique383.tsv.gz', sep='\t')
@@ -26,6 +26,7 @@ trigrams = Counter(zip(random_string, random_string[1:]))
 tri_grams = [print(trigrams)]
 
 # Generating Pseudowords
-
+pseudowords = [RandomWords((bigrams)), RandomWords((trigrams))]
+print(pseudowords)
 # Phonological rule selection
 # Out-put pseudowords
