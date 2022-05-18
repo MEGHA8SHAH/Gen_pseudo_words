@@ -30,7 +30,7 @@ pattern_tri = re.compile("^([ptkbdgcqwjfshlxvnmlrz][aeuio]|[aeuio][ptkbdgcqwjfsh
 list_tri = [w for w in pwt6 if pattern_tri.match(w) is not None]
 print(list_tri)
 print(list_bi)
-# Phonological features and phonological rule
+# Phonological rule
 for i in range(len(list_tri)):
     if ["s"] in list_tri:
         ["s"] += ["z"]
