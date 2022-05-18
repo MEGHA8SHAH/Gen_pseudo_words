@@ -3,43 +3,44 @@
 
 Generation of pseudo words
 
-This Pseudoword generator is more like a simulator that lets you choose rules used to create these pseudowords.
+This Pseudoword generator is more like a simulator that first generates bi-grams and tri-grams using a dataset of french words, and then applies phonological rules to print 2 lists of pseudowords that abid those rules.
 
-The aim is to create pseudowords using both orthographical and phonological rules. Making this model relevant to both reading tasks as well as auditory tasks. 
+The aim is to create pseudowords using both orthographical and phonological rules. Making this model relevant to both reading tasks testing orthographical and phological understanding. 
 
-The generator is only working with one language - English
-
-
-How would the generator run?
-
-Step 1: User will have to select the database to use it as a pre-processed word list in the language - default setting - English
-
-Step 2: They, will then have to select the phonological rules they wish to abide - eg: all 3, only 1, or any 2. (The rule should be manually selected by the user)
+Project plan:
+1. Import dataset
+2. create bi-grams and tri-gram
+3. Apply phonological rules
+4. Generate pseudowords
 
 
-Phonological rules avaliable :
+This generator is specifically created to generate French pseudowords
 
-- "Voiceless stops /p/, /t/, and /k/ are asiprated in word initially and in intially stressed syllables"
 
-- "All vowels and dipthalongs are nasalized before a nasal"
+How does the generator run?
 
-- "All vowels or dipthongs are pronounced lobger when followed by a voiced consonant"
+step 1: Dataset consisting french words is imported.
 
->> This step helps shortlisting a set of words from the database to use it for creating pseudowords.
+step 2: Bi-grams and tri-grams and extracted.
 
-Step 3: A word list will be created of all the words in the database that follows rule(s) specified. 
+step 3: Using the data all bi-grams and tri-grams are created
 
-Step 4: They then have to choose the generation setting - Tri-grams or Bi-grams (each of the two setting decomposes each word in the word list into 2 different frequencies).
+step 4: Generating a list of pseudowords using created bi-grams and tri-grams
 
-Step 5: Finally, user have to select the number of pseudowords it wants the generator to create.
+step 5: Phonological rules are applied to the pseudowords
 
-Step 6: The generator will then create a set of pseudowords in the output screen.
+step 6: All pseudowords are printed
 
 
 
-Work plan
-- upload the selected database
-- add the phonological rules in form of options
-- link the rules with the database for shortlisting words
-- generate code to create bi-grams or tri-gram of the shotlisted words
-- Create a screen to project the generated pseudowords
+
+Phonological rule used by the project are :
+
+([s] -> [z] / B)
+
+This rule replaces all 's' to z in the coda position
+
+>> No special packages are needed to be downloaded
+
+
+
