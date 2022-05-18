@@ -21,26 +21,33 @@ How does the generator run?
 
 step 1: Dataset consisting french words is imported.
 
+>> This dataset helps in creating a reference frame work for the bi-grams and tri-gram. 
+
 step 2: Bi-grams and tri-grams and extracted.
 
 step 3: Using the data all bi-grams and tri-grams are created
 
 step 4: Generating a list of pseudowords using created bi-grams and tri-grams
 
+>> It is important to give a structure too the bi-grams and tri-grams. Therefore, CV, VC, CC, VV rules have been imposed in the structure; where "C" denotes consonants, and "V" denotes for Vowels.
+
 step 5: Phonological rules are applied to the pseudowords
+
+>> Phonolex package was used to apply a structure rule to the generated pseudowords. The package allowed to form multiple phonological rules given the syntax of the program and those rules were finally applied to final list of pseudowords to filter the list. 
 
 step 6: All pseudowords are printed
 
 
+Phonological rules used by the project are :
 
+>> [+fricitives +stops] -> [-voicing]
 
-Phonological rule used by the project are :
+>> [+vowel] -> [+voicing]
 
-([s] -> [z] / B)
+Two phonological rules have been used to filter the psuedowords. The first rule makes every fricitives stops voiceless. The second rule voices every vowel.
 
-This rule replaces all 's' to z in the coda position
-
->> No special packages are needed to be downloaded
+special packages  to be downloaded:
+use `pip install phonolex` in terminal
 
 
 
