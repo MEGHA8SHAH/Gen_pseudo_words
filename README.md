@@ -40,11 +40,11 @@ step 6: All pseudowords are printed
 
 Phonological rules used by the project are :
 
->> [+fricitives +stops] -> [-voicing]
+>> [+fricatives +stops] -> [-voicing]
 
 >> [+vowel] -> [+voicing]
 
-Two phonological rules have been used to filter the psuedowords. The first rule makes every fricitives stops voiceless. The second rule voices every vowel.
+Two phonological rules have been used to filter the psuedowords. The first rule makes every fricatives stops voiceless. The second rule voices every vowel. These two rules are coded together.
 
 special packages  to be downloaded:
 use `pip install phonolex` in terminal
