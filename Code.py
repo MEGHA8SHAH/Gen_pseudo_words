@@ -3,11 +3,12 @@ import pandas
 import random
 import string
 import re
+from phonolex.phonology import Phonology
 # Uploading the selected data
 lexique = pandas.read_csv('lexique383.tsv.gz', sep='\t')
-words= list(lexique.ortho)
-print(words)
-words2 = [str(w) for w in words]
+wordz= list(lexique.ortho)
+print(wordz)
+words2 = [str(w) for w in wordz]
 # Extracting bi-grams and tri-grams
 def extract_bigrams(token):
     return [token[i:i+2] for i in range(len(token) - 1)]
@@ -28,18 +29,20 @@ list_bi =[w for w in pwb6 if pattern_bi.match(w) is not None]
 pwt6 = ["".join(random.sample(all_tri_grams, 2)) for _ in range(10000)]
 pattern_tri = re.compile("^([ptkbdgcqwjfshlxvnmlrz][aeuio]|[aeuio][ptkbdgcqwjfshlxvnmlrz]|[aeuio][aeuio]|[ptkbdgcqwjfshlxvnmlrz][ptkbdgcqwjfshlxvnmlrz])+$")
 list_tri = [w for w in pwt6 if pattern_tri.match(w) is not None]
-print(list_tri)
-print(list_bi)
-# Phonological rule
-for i in range(len(list_tri)):
-    if ["s"] in list_tri:
-        ["s"] += ["z"]
-print(list_tri)
-for i in range(len(list_bi)):
-    if ["s"] in list_bi:
-        ["s"] += ["z"]
-print(list_bi)
+all_pseudo_words = [list_bi,list_tri]
+print(all_pseudo_words)
+# Phonological Featurisation and rule
+final_pseudowords = []
+ph = Phonology()
+word_features = [
+{'SYLLABLES': [2, 3], 
+'CHARACTERS':[6, 9], 
+'CONTAINS_DIPTHONGS': 'false'}]
+phone_feature = [{'TYPE': 'C', 'FRICATIVE': 1.0, 'STOP': 0,' VOICE': 0},{'TYPE': 'V', 'NASAL': 1.0}]
+rule = ph.match(word_features, phone_feature, mode = 'CONTAINS', frequency = 'ALL')
+for items in all_pseudo_words:
+    if rule in all_pseudo_words:
+        final_pseudowords.append
+print(final_pseudowords)
 
-# Printing Pseudowords
-print(list_tri)
-print(list_bi)
+
